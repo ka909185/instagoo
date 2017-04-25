@@ -5,7 +5,7 @@
       <%= f.hidden_field :title %>
       <%= f.hidden_field :content %>
       <p>タイトル:<%= @pic.title %></p>
-      <p>本文:<%= @pic.content %></p>
+      <p>説明文:<%= @pic.content %></p>
       <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
     <% end %>
     <%= form_for(@pic, url: new_pic_path, method: 'get') do |f| %>
