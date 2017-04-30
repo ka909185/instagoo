@@ -13,6 +13,10 @@
 <%= f.label :タイトル %>
 <%= f.text_field :title, class: 'form-control' %>
 <br>
+<%= f.label :写真 %>
+<%= f.file_field :picture %>
+<%= f.hidden_field :picture_cache %>
+<br>
 <%= f.label :説明文 %>
 <%= f.text_field :content, class: 'form-control' %>
 <br>

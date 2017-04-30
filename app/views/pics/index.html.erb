@@ -6,6 +6,11 @@
     <% @pics.each do |pic| %>
     <div class="row">
       <h4><strong><%= pic.title %></strong></h4>
+
+        <% if pic.picture? %>
+        <span><%= image_tag(pic.picture) %></span>
+        <% end %>
+
       <p><%= pic.content %></p>
       <p><%= pic.user.name %></p>
       <p><%= profile_img(pic.user) %></p>

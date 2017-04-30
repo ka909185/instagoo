@@ -3,13 +3,18 @@
     <h3>以下の内容で、送信する。</h3>
     <%= form_for(@pic) do |f| %>
       <%= f.hidden_field :title %>
+      <%= f.hidden_field :picture %>
+      <%= f.hidden_field :picture_cache %>
       <%= f.hidden_field :content %>
       <p>タイトル:<%= @pic.title %></p>
+      <p>投稿写真:<%= @pic.picture %></p>
       <p>説明文:<%= @pic.content %></p>
       <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
     <% end %>
     <%= form_for(@pic, url: new_pic_path, method: 'get') do |f| %>
       <%= f.hidden_field :title %>
+      <%= f.hidden_field :picture %>
+      <%= f.hidden_field :picture_cache %>
       <%= f.hidden_field :content %>
       <%= f.submit "もどる", name: 'back', class: 'btn btn-default btn-block' %>
     <% end %>
